@@ -10,41 +10,6 @@ body {
   color: #2b1a1b;
 }
 
-.titulo {
-  margin: 2rem 0;
-  color: #800020;
-  text-align: center;
-  font-family: "Pacifico", cursive;
-  font-size: 5rem;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.portada {
-  display: flex;
-  justify-content: center;
-  margin: 1rem 0;
-}
-
-.portada img {
-  width: 100%;
-  height: auto;
-}
-
-.banner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #800020;
-  color: white;
-  font-size: 1.2rem;
-  padding: 10px;
-  letter-spacing: 2px;
-}
-
-.banner p {
-  margin: 0;
-}
 
 .bg-bordo {
   background-color: #800020 !important;

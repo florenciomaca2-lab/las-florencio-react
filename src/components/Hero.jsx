@@ -1,3 +1,4 @@
+import "./Hero.css";
 import portada from "../assets/imagen/PORTADA.jpg";
 
 function Hero() {
