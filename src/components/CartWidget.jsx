@@ -1,9 +1,9 @@
 function CartWidget () {
     return (
-        <div>
-            🛒 0
+        <div className="text white">
+            <i className="bi bi-bag"></i>0
         </div>
-    )
+    );
 }
 
-export default CartWidget
+export default CartWidget;
