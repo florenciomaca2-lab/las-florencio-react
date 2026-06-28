@@ -1,13 +1,14 @@
+import "./ItemListContainer.css";
 import ItemList from "./ItemList"
 
 function ItemListContainer({ greeting }) {
     return (
-        <div>
+        <section className="item-list-container">
             <h1>{greeting}</h1>
             <p>Explorá nuestra colección de ropa</p>
             <ItemList />
-        </div>
+       </section>
     )
 }
 
-export default ItemListContainer
+export default ItemListContainer;
