@@ -28,13 +28,20 @@ function ItemList() {
                 <Item 
                 nombre="Remera Básica"
                 precio={25000}
-                imagen={remera-basica}
+                imagen={remeraBasica}
                 />
 
                 <Item 
-                
+                       nombre="Palazzo Cleo"
+                precio={35000}
+                imagen={palazzoTiras}
                 />
-                <Item />
+                <Item 
+                       nombre="Vestido Real"
+                precio={40000}
+                imagen={vdoRealf}
+                imagen={vdoRealb}
+                />
 
             </div>
         </>
