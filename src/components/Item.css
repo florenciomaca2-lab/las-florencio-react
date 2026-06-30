@@ -1,32 +1,42 @@
-.item {
-    width: 250px;
-    border: 1px solid #ddd;
+.Item {
+    width: 260px;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 15px;
     background-color: white;
     text-align: center;
+    box-shadow: 0 2px 8px rgba (0, 0, 0, 0.15);
 }
 
-.item img {
+.Item img {
     width: 100%;
     border-radius: 8px;
+    height: 320px;
+    object-fit: cover;
 }
 
-.item h3 {
-    margin: 1rem 0 0.5rem;
+.Item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.2rem;
 }
 
-.item p {
+.Item p {
+    font-size: 1.1rem;
 color: #800020;
 font-weight: bold;
 margin-bottom: 1rem;
 }
 
-.item button {
+.Item button {
+    width: 100%;
     background-color: #800020;
+    margin-top: 10px;
     color: white;
     border: none;
-    padding: .7rem 1rem;
+    padding: 10px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+.Item button:hover {
+    background: color #5f0018;
 }
