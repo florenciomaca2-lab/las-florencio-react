@@ -3,7 +3,7 @@ import portada from "../assets/imagen/PORTADA.jpg";
 
 function Hero() {
     return (
-        <section>
+        <section className="hero">
             <h1 className="titulo">Las Florencio</h1>
 
             <figure className="portada">

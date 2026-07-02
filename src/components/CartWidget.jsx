@@ -1,7 +1,10 @@
+import "../components/CartWidget.css";
+
 function CartWidget () {
     return (
-        <div className="text white">
-            <i className="bi bi-bag"></i>0
+        <div className="cart-widget">
+            <i className="bi bi-bag"></i>
+            <span>0</span>
         </div>
     );
 }
