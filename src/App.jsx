@@ -10,8 +10,7 @@ function App() {
       <Banner />
       <Navbar />
       <Hero />
-      <ItemListContainer greeting={"Bienvenido"}/>
-    </>
+      <ItemListContainer greeting={"Bienvenido"} />    </>
   )
 }
 
