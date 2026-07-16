@@ -1,16 +1,14 @@
+import { useParams } from "react-router-dom";
+
+import productos from "../data/productos";
 import ItemDetail from "../components/ItemDetail";
-import remeraBasica from "../assets/imagen/RemeraCamel.jpg";
 
 function ItemDetailContainer() {
-    const producto ={
-        id:1,
-        nombre: "Remera Básica",
-        precio: 25000,
-        imagen: remeraBasica,
-        descripcion: "Remera de algodón premium color camel.",
-        stock: 8,
-    };
-
+    const { id } = useParams();
+    
+    const producto = productos.find(
+        (producto) => producto.id === Number(id)
+    );
     return (
             <ItemDetail 
             nombre={producto.nombre}
@@ -20,6 +18,6 @@ function ItemDetailContainer() {
             stock={producto.stock}
             />
     )
-}
+};
 
 export default ItemDetailContainer
