@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./ItemCount.css";
+import { CartContext } from "../context/CartContext";
 
 function ItemCount({ stock, producto }) {
 
     const [cantidad, setCantidad] = useState(1);
+    const { agregarAlCarrito } = useContext(CartContext);
 
     function aumentarCantidad() {
         if (cantidad < stock)
@@ -17,7 +19,7 @@ function ItemCount({ stock, producto }) {
     }
 
     function agregarCarrito() {
-        console.log("Cantidad elegida:", cantidad);
+        agregarAlCarrito(producto,cantidad);
     }
 
     return (

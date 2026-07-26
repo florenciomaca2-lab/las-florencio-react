@@ -11,10 +11,14 @@ function CartProvider({ children }) {
             ...producto,
             cantidad
         };
-        
-        setCarrito([...carrito, nuevoProducto]);
-    }
 
+        const carritoActualizado = [...carrito, nuevoProducto];
+
+        setCarrito(carritoActualizado);
+
+        console.log(carritoActualizado);
+    }
+    
     return (
         <CartContext.Provider value={{ carrito, agregarAlCarrito }}>
             {children}
