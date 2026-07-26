@@ -1,20 +1,24 @@
 import { useState } from "react";
 import "./ItemCount.css";
 
-function ItemCount({ stock }) {
- 
-    const [cantidad, setCantidad] = useState(1);
-  
-  function aumentarCantidad() {
-    if ( cantidad < stock)
-    setCantidad (cantidad + 1);
-  }
+function ItemCount({ stock, producto }) {
 
-  function disminuirCantidad() {
-    if (cantidad > 1) {
-        setCantidad(cantidad - 1);
+    const [cantidad, setCantidad] = useState(1);
+
+    function aumentarCantidad() {
+        if (cantidad < stock)
+            setCantidad(cantidad + 1);
     }
-  }
+
+    function disminuirCantidad() {
+        if (cantidad > 1) {
+            setCantidad(cantidad - 1);
+        }
+    }
+
+    function agregarCarrito() {
+        console.log("Cantidad elegida:", cantidad);
+    }
 
     return (
         <div className="item-count">
@@ -26,7 +30,10 @@ function ItemCount({ stock }) {
                 <button onClick={aumentarCantidad}>+</button>
             </div>
 
-            <button className="btn-agregar">
+            <button
+                className="btn-agregar"
+                onClick={agregarCarrito}
+            >
                 Agregar al carrito
             </button>
         </div>

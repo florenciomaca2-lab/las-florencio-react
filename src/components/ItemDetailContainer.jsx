@@ -5,19 +5,12 @@ import ItemDetail from "../components/ItemDetail";
 
 function ItemDetailContainer() {
     const { id } = useParams();
-    
+
     const producto = productos.find(
         (producto) => producto.id === Number(id)
     );
-    return (
-            <ItemDetail 
-            nombre={producto.nombre}
-            precio={producto.precio}
-            imagen={producto.imagen}
-            descripcion={producto.descripcion}
-            stock={producto.stock}
-            />
-    )
+    return <ItemDetail producto={producto} />;
+
 };
 
 export default ItemDetailContainer

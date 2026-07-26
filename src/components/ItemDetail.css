@@ -1,0 +1,17 @@
+.item-detail {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding: 30px;
+}
+
+.item-detail img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.detalle-info {
+    flex: 1;
+}

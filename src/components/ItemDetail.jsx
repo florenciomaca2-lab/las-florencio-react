@@ -1,21 +1,26 @@
 import "./ItemDetail.css";
 import ItemCount from "../components/ItemCount";
 
-function ItemDetail({ nombre, precio, imagen, descripcion, stock }) {
+function ItemDetail({ producto }) {
     return (
         <section className="item-detail">
-            <img src={imagen} alt={nombre} />
+            <img src={producto.imagen} alt={producto.nombre} />
 
             <div className="detalle-info">
-                <h2>{nombre}</h2>
+                <h2>{producto.nombre}</h2>
 
-                <h3>${precio}</h3>
+                <h3>${producto.precio}</h3>
 
-                <p>{descripcion}</p>
+                <p>{producto.descripcion}</p>
 
-                <p><strong>Stock:</strong>{stock}</p>
+                <p>
+                    <strong>Stock:</strong> {producto.stock}
+                </p>
 
-                <ItemCount />
+                <ItemCount
+                    stock={producto.stock}
+                    producto={producto}
+                />
             </div>
 
         </section>
