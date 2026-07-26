@@ -12,7 +12,9 @@ function App() {
     <>
       <Banner />
       <Navbar />
+
       <Routes>
+
         <Route
           path="/"
           element={
@@ -27,9 +29,15 @@ function App() {
           path="/item/:id"
           element={<ItemDetailContainer />}
         />
+
+        <Route
+          path="/category/:categoria"
+          element={<ItemListContainer />}
+        />
+
       </Routes>
-      </>
-      );
+    </>
+  );
 }
 
-      export default App;
+export default App;

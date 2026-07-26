@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 import CartWidget from "./CartWidget"
 
@@ -13,7 +15,7 @@ function Navbar() {
         <nav className="navbar navbar-expand-lg bg-bordo navbar-dark shadow-sm">
             <div className="container-fluid">
 
-                <a className="navbar-brand" href="#">
+                <a className="navbar-brand" to="/">
                     HOME
                 </a>
 
@@ -25,15 +27,21 @@ function Navbar() {
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
-               
+
                 <div className="collapse navbar-collapse" id="navbarNav">
-                   
+
                     <ul className="navbar-nav me-auto">
+
                         {categorias.map((categoria) => (
                             <li key={categoria} className="nav-item">
-                                <a className="nav-link" href="#">
+
+                                <Link
+                                    className="nav-link"
+                                    to={`/category/${categoria.toLowerCase()}`}
+                                >
                                     {categoria}
-                                </a>
+                                </Link>
+
                             </li>
                         ))}
                     </ul>

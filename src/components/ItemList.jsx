@@ -1,11 +1,12 @@
 import "./ItemList.css";
 import Item from "./Item";
-import productos from "../data/productos";
 
-function ItemList() {
+function ItemList({ productos }) {
+
     return (
         <>
             <h2>Productos</h2>
+            
             <div className="item-list">
                 {
                     productos.map((producto) => (
