@@ -3,14 +3,14 @@ import { CartContext } from "../context/CartContext";
 
 import "../components/CartWidget.css";
 
-function CartWidget () {
+function CartWidget() {
 
-    const { carrito } = useContext(CartContext);
+    const { cantidadTotal } = useContext(CartContext);
 
     return (
         <div className="cart-widget">
             <i className="bi bi-bag"></i>
-            <span>{carrito.length}</span>
+            <span>{cantidadTotal()}</span>
         </div>
     );
 }

@@ -7,23 +7,55 @@ function CartProvider({ children }) {
 
     function agregarAlCarrito(producto, cantidad) {
 
-        const nuevoProducto = {
-            ...producto,
-            cantidad
-        };
+        const productoExistente = carrito.find(
+            (item) => item.id === producto.id
+        );
 
-        const carritoActualizado = [...carrito, nuevoProducto];
+        if (productoExistente) {
 
-        setCarrito(carritoActualizado);
+            const carritoActualizado = carrito.map((item) =>
+                item.id === producto.id
+                    ? {
+                        ...item,
+                        cantidad: item.cantidad + cantidad
+                    }
+                    : item
+            );
 
-        console.log(carritoActualizado);
+            setCarrito(carritoActualizado);
+
+        } else {
+
+            const nuevoProducto = {
+                ...producto,
+                cantidad
+            };
+
+            setCarrito([
+                ...carrito,
+                nuevoProducto
+            ]);
+        }
     }
-    
-    return (
-        <CartContext.Provider value={{ carrito, agregarAlCarrito }}>
-            {children}
-        </CartContext.Provider>
-    );
+
+    function cantidadTotal() {
+        return carrito.reduce(
+            (total, producto) => total + producto.cantidad,
+            0
+        );
+    }
+
+return (
+    <CartContext.Provider
+        value={{
+            carrito,
+            agregarAlCarrito,
+            cantidadTotal
+        }}
+    >
+        {children}
+    </CartContext.Provider>
+);
 }
 
 export default CartProvider;
