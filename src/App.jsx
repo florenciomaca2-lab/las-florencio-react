@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import Cart from "./components/Cart";
 
 function App() {
   return (
@@ -33,6 +34,11 @@ function App() {
         <Route
           path="/category/:categoria"
           element={<ItemListContainer />}
+        />
+
+        <Route
+          path="/cart"
+          element={<Cart />}
         />
 
       </Routes>

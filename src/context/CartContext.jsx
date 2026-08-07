@@ -22,6 +22,8 @@ function CartProvider({ children }) {
                     : item
             );
 
+            console.log("CARRITO ACTUALIZADO:", carritoActualizado);
+
             setCarrito(carritoActualizado);
 
         } else {
@@ -30,6 +32,13 @@ function CartProvider({ children }) {
                 ...producto,
                 cantidad
             };
+
+            const carritoNuevo = [
+                ...carrito,
+                nuevoProducto
+            ];
+
+            console.log("CARRITO NUEVO:", carritoNuevo);
 
             setCarrito([
                 ...carrito,
@@ -45,17 +54,17 @@ function CartProvider({ children }) {
         );
     }
 
-return (
-    <CartContext.Provider
-        value={{
-            carrito,
-            agregarAlCarrito,
-            cantidadTotal
-        }}
-    >
-        {children}
-    </CartContext.Provider>
-);
+    return (
+        <CartContext.Provider
+            value={{
+                carrito,
+                agregarAlCarrito,
+                cantidadTotal
+            }}
+        >
+            {children}
+        </CartContext.Provider>
+    );
 }
 
 export default CartProvider;
